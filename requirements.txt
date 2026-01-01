@@ -1,0 +1,5 @@
+requests
+textblob
+matplotlib
+pandas
+numpy
