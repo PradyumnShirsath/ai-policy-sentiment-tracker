@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/Status-Active_Monitoring-success?style=flat-square)
 ![Domain](https://img.shields.io/badge/Domain-AI_Governance-blue?style=flat-square)
-![Tech](https://img.shields.io/badge/Tech-NLP_%26_Python-yellow?style=flat-square)
+![Method](https://img.shields.io/badge/Method-Natural_Language_Processing-yellow?style=flat-square)
 
 ## 🇺🇳 Abstract & Policy Context
 As Artificial Intelligence evolves from a theoretical concept to a geopolitical force, the diplomatic language surrounding it has shifted drastically.
@@ -26,15 +26,26 @@ This project serves as a prototype for **Automated Policy Monitoring**, helping 
 
 ---
 
-## 🧠 Methodology
-The core engine utilizes **Lexicon-Based Sentiment Analysis** (`TextBlob`) to evaluate policy documents.
+## 🧠 Mathematical Framework
+The core engine utilizes **Lexicon-Based Sentiment Analysis** (via `TextBlob` and `NLTK`) to evaluate policy documents.
 
-1.  **Data Ingestion:** Extracts key policy statements from historical UN resolutions.
-2.  **NLP Scoring:** Assigns a **Polarity Score** to each document:
-    * **+1.0**: Highly Positive (Words like "Benefit," "Hope," "Achievement").
-    * **0.0**: Neutral (Legal/Technical language).
-    * **-1.0**: Highly Negative (Words like "Threat," "Risk," "Danger").
-3.  **Trend Visualization:** Maps these scores over a temporal axis to identify inflection points in global governance.
+Unlike 'Black Box' deep learning models, this approach allows for explainable scoring based on semantic tokens.
+
+### 1. Polarity Scoring Formula
+For each policy document $D$, the **Compound Polarity Score ($P$)** is calculated as the weighted average of individual semantic tokens:
+
+$$P(D) = \frac{\sum_{i=1}^{N} (s_i \cdot w_i)}{\sum_{i=1}^{N} |s_i|}$$
+
+Where:
+* **$s_i$ (Token Sentiment):** The pre-defined lexical value of a word (e.g., "safe" $\approx +0.5$, "threat" $\approx -0.7$).
+* **$w_i$ (Intensity Modifier):** A scalar multiplier derived from adverbs (e.g., "deeply" concerned multiplies the score by $2.0$).
+* **Negation Handling:** Logical inverters (e.g., "not") multiply the local phrase score by $-1.0$.
+
+### 2. Interpretation of Metrics
+The final score $P$ exists on a continuous interval $[-1.0, +1.0]$:
+* **$P \in [0.5, 1.0]$ (Optimistic):** Language focuses on opportunities, benefits, and innovation.
+* **$P \approx 0$ (Neutral):** Purely legal, technical, or balanced regulatory language.
+* **$P \in [-1.0, -0.5]$ (Alarmist):** Language focuses on existential threats, red lines, and prohibitions.
 
 ---
 
