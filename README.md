@@ -20,7 +20,7 @@ This project serves as a prototype for **Automated Policy Monitoring**, helping 
 ### Sentiment Trend Output
 ![Sentiment Trend](policy_sentiment_trend.png)
 
-*Figure 1: Longitudinal Sentiment Analysis (2015-2024). The graph demonstrates a clear downward trend in "Sentiment Polarity," indicating a structural shift in UN language from promotional (High Positivity) to regulatory and cautionary (Lower/Neutral Positivity).*
+*Figure 1: Longitudinal Sentiment Analysis (2015-2024). The graph demonstrates a clear downward trend in "Sentiment Polarity" indicating a structural shift in UN language from promotional (High Positivity) to regulatory and cautionary (Lower/Neutral Positivity).*
 
 **Key Insight:** The sharp decline post-2021 correlates with the emergence of Generative AI and increased calls for binding international treaties (e.g., the EU AI Act context and UN High-Level Advisory Board findings).
 
